@@ -6,11 +6,11 @@ import org.springframework.stereotype.Repository;
 
 import fr.formation.inti.entity.Employee;
 
-@Repository("dao")
-public class EmployeeDao extends GenericDaoHibernate<Employee, Integer> implements IEmployeeDao {
-private final Log log = LogFactory.getLog(EmployeeDao.class);
+@Repository
+public class EmployeeDaoJDBC extends GenericDaoHibernate<Employee, Integer> implements IEmployeeDao {
+private final Log log = LogFactory.getLog(EmployeeDaoJDBC.class);
 	
-	public EmployeeDao() {
+	public EmployeeDaoJDBC() {
 		
 		log.info("------------------------------ create new EmployeeDao" );
 		
