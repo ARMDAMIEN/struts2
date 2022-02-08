@@ -14,16 +14,16 @@ public class UserService implements IUserService{
 	}
 
 	public User findByLoginAndPassword(String login, String password) {
-		dao.beginTransaction();
+		
 		User user = dao.findByLoginAndPassword(login, password);
-		dao.commitTransaction();
+		
 		return user;
 	}
 
 	public Integer ajouterUser(User user) {
-		dao.beginTransaction();
+		
 		Integer id = dao.save(user);
-		dao.commitTransaction();
+		
 		return id;
 	}
 	
@@ -61,30 +61,6 @@ public class UserService implements IUserService{
 	public List<User> findAll() {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	@Override
-	public void commitTransaction() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void rollBackTransaction() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void beginTransaction() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void close() {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
