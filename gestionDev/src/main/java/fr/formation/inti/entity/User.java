@@ -15,32 +15,31 @@ import javax.persistence.Table;
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_user")
+	@Column(name = "idUser")
 	private Integer userId;
 	private String login;
 	private String password;
 	@OneToOne
 	@JoinColumn(name = "emp_id", nullable = false)
 	private Employee emp;
-	@Column(name = "connection_number")
-	private Integer connectionNumber;
+
 	
 	
 	public User() {
 	}
 	
-	public User(String login, String password, Integer connectionNumber) {
+	public User(String login, String password) {
 		super();
 		this.login = login;
 		this.password = password;
-		this.connectionNumber = connectionNumber;
+		
 	}
-	public User(Integer userId, String login, String password, Integer connectionNumber) {
+	public User(Integer userId, String login, String password) {
 		super();
 		this.userId = userId;
 		this.login = login;
 		this.password = password;
-		this.connectionNumber = connectionNumber;
+		
 	}
 	
 	
@@ -52,12 +51,7 @@ public class User {
 		this.emp = emp;
 	}
 
-	public Integer getConnectionNumber() {
-		return connectionNumber;
-	}
-	public void setConnectionNumber(Integer connectionNumber) {
-		this.connectionNumber = connectionNumber;
-	}
+		
 	public Integer getUserId() {
 		return userId;
 	}
@@ -78,8 +72,7 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", login=" + login + ", password=" + password + ", connectionNumber="
-				+ connectionNumber + "]";
+		return "User [userId=" + userId + ", login=" + login + ", password=" + password + "]";
 	}
 	
 	

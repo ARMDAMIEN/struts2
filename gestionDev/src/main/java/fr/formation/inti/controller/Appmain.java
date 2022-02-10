@@ -22,7 +22,7 @@ public class Appmain {
 		ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfiguration.class);
 //		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-//		IEmployeeService service = context.getBean("EmployeeService", EmployeeService.class);
+//		IEmployeeService service = context.getBean("employeeService", EmployeeService.class);
 //
 //		List<Employee> employees = service.findAll();
 //
