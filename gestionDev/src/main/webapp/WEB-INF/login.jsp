@@ -39,14 +39,19 @@
                <form action="home" method="post">
                   <div class="form-group">
                      
+                     <label><s:message code="label.login" /></label>
                      <input type="text" class="form-control" placeholder="User Name" name="login">
                   </div>
                   <div class="form-group">
                      <label><s:message code="label.password" /></label>
                      <input type="password" class="form-control" placeholder="Password" name="password" >
                   </div>
+                   <div class="form-group">
+                     <label><s:message code="label." /></label>
+                     <input type="password" class="form-control" placeholder="Password" name="password" >
+                  </div>
                   <button type="submit" class="btn btn-black">Login</button>
-                  <button type="submit" class="btn btn-secondary">Register</button>        
+                  <button type="submit" class="btn btn-secondary">Register</button>     
                </form>
             </div>
          </div>
